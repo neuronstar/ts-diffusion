@@ -8,6 +8,7 @@
    2. Specify python version, e.g. `poetry env use 3.10.8`.
    3. Install dependencies: `poetry install`
 3. If you really hate poetry, please use the `requirements.txt`. This file is automatically updated by poetry though the poetry-export hook. Any manual changes to this `requirements.txt` file will be overwritten by pre-commit.
+4. All contents in the `datasets` folder is excluded from git.
 
 
 ## Datasets
@@ -15,3 +16,9 @@
 We can download datasets and load them through `ts-bolt`.
 
 ### Download datasets
+
+Example
+
+```sh
+poetry run bolt download --name ecb_exchange_rate --target datasets
+```
