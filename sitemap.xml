@@ -2,27 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://neuronstar.github.io/ts-diffusion/</loc>
-         <lastmod>2023-01-20</lastmod>
+         <lastmod>2023-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://neuronstar.github.io/ts-diffusion/changelog/</loc>
-         <lastmod>2023-01-20</lastmod>
+         <lastmod>2023-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://neuronstar.github.io/ts-diffusion/references/</loc>
-         <lastmod>2023-01-20</lastmod>
+         <lastmod>2023-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://neuronstar.github.io/ts-diffusion/references/datamodules/</loc>
-         <lastmod>2023-01-20</lastmod>
+         <lastmod>2023-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://neuronstar.github.io/ts-diffusion/tutorials/</loc>
-         <lastmod>2023-01-20</lastmod>
+         <lastmod>2023-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://neuronstar.github.io/ts-diffusion/tutorials/datasets/</loc>
+         <lastmod>2023-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
