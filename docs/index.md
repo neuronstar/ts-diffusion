@@ -20,9 +20,8 @@
 0. Install [pre-commit](https://pre-commit.com/).
 1. Clone this repository.
 2. Install git hooks using `pre-commit install`.
-   1. This has to be done ASAP, before committing any changes.
-   2. If one forgets to do this before git commit, run `pre-commit run --all-files` then commit again.
-
+    1. This has to be done ASAP, before committing any changes.
+    2. If one forgets to do this before git commit, run `pre-commit run --all-files` then commit again.
 
 ### 2. Setup Python Environment
 
