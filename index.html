@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentation-for-ts_diffusion" class="md-skip">
+        <a href="#getting-started" class="md-skip">
           Skip to content
         </a>
       
@@ -327,9 +327,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dev-env" class="md-nav__link">
-    Dev Env
+  <a href="#prepare-dev-environment" class="md-nav__link">
+    Prepare Dev Environment
   </a>
+  
+    <nav class="md-nav" aria-label="Prepare Dev Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-prerequisites" class="md-nav__link">
+    0. Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-pre-commit" class="md-nav__link">
+    1. Setup pre-commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setup-python-environment" class="md-nav__link">
+    2. Setup Python Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -528,9 +555,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dev-env" class="md-nav__link">
-    Dev Env
+  <a href="#prepare-dev-environment" class="md-nav__link">
+    Prepare Dev Environment
   </a>
+  
+    <nav class="md-nav" aria-label="Prepare Dev Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-prerequisites" class="md-nav__link">
+    0. Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-pre-commit" class="md-nav__link">
+    1. Setup pre-commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setup-python-environment" class="md-nav__link">
+    2. Setup Python Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -573,23 +627,60 @@
 
 
 
-<h1 id="documentation-for-ts_diffusion">Documentation for ts_diffusion<a class="headerlink" href="#documentation-for-ts_diffusion" title="Permanent link">¤</a></h1>
-<h2 id="dev-env">Dev Env<a class="headerlink" href="#dev-env" title="Permanent link">¤</a></h2>
+<h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">¤</a></h1>
+<p><code>ts_diffusion</code> is a <a href="https://github.com/neuronstar/ts-diffusion/graphs/contributors">community</a> project investigating cutting-edge diffusion models for time series.</p>
+<h2 id="prepare-dev-environment">Prepare Dev Environment<a class="headerlink" href="#prepare-dev-environment" title="Permanent link">¤</a></h2>
+<h3 id="0-prerequisites">0. Prerequisites<a class="headerlink" href="#0-prerequisites" title="Permanent link">¤</a></h3>
+<ul>
+<li><a href="https://pre-commit.com/">pre-commit</a>: set up git commit hooks</li>
+<li>whichever python virtual env management tool, pyenv, conda, ...</li>
+<li><a href="https://python-poetry.org/">poetry</a>: package and env management</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Python Environment</p>
+<p><a href="https://dl.leima.is/engineering/python/">Here is a one-pager</a> about python environment and pre-commit.</p>
+</div>
+<h3 id="1-setup-pre-commit">1. Setup pre-commit<a class="headerlink" href="#1-setup-pre-commit" title="Permanent link">¤</a></h3>
 <ol>
-<li>This repo has <a href="https://pre-commit.com/">pre-commit</a> configured. Please run <code>pre-commit install</code> before committing code.</li>
-<li><code>ts_diffusion</code> uses <a href="https://python-poetry.org/">poetry</a> to manage python env.</li>
-<li>Install poetry.</li>
-<li>Specify python version, e.g. <code>poetry env use 3.10.8</code>.</li>
-<li>Install dependencies: <code>poetry install</code></li>
-<li>If you really hate poetry, please use the <code>requirements.txt</code>. This file is automatically updated by poetry though the poetry-export hook. Any manual changes to this <code>requirements.txt</code> file will be overwritten by pre-commit.</li>
-<li>All contents in the <code>datasets</code> folder is excluded from git.</li>
+<li>Install <a href="https://pre-commit.com/">pre-commit</a>.</li>
+<li>Clone this repository.</li>
+<li>Install git hooks using <code>pre-commit install</code>.</li>
+<li>This has to be done ASAP, before committing any changes.</li>
+<li>If one forgets to do this before git commit, run <code>pre-commit run --all-files</code> then commit again.</li>
 </ol>
+<h3 id="2-setup-python-environment">2. Setup Python Environment<a class="headerlink" href="#2-setup-python-environment" title="Permanent link">¤</a></h3>
+<ol>
+<li>Install <a href="https://python-poetry.org/">poetry</a>.</li>
+<li>Use your python environment management tool to create a environment with a specific python version,</li>
+<li>e.g., <code>conda create -n ts-diffusion python=3.10 pip</code> if using conda, or</li>
+<li><code>pyenv shell 3.10.9</code> if using pyenv.</li>
+<li>Tell poetry we want to use this python environment: <code>poetry env use 3.10.8</code>.</li>
+<li>Install dependencies: <code>poetry install</code></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">'I hate poetry!'</p>
+<p>If you really hate poetry, please use the <code>requirements.txt</code> to install dependencies.</p>
+<p>However, please note that this file is automatically updated by poetry though the poetry-export hook.
+Any manual changes to this <code>requirements.txt</code> file will be overwritten by our automated pre-commit hooks.</p>
+</div>
 <h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">¤</a></h2>
 <p>We can download datasets and load them through <code>ts-bolt</code>.</p>
+<ol>
+<li>All contents in the <code>datasets</code> folder is excluded from git.</li>
+</ol>
 <h3 id="download-datasets">Download datasets<a class="headerlink" href="#download-datasets" title="Permanent link">¤</a></h3>
-<p>Example</p>
+<p>This repository ships a datasest downloading tool called "bolt".</p>
 <div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>bolt<span class="w"> </span>download<span class="w"> </span>--name<span class="w"> </span>ecb_exchange_rate<span class="w"> </span>--target<span class="w"> </span>datasets
 </code></pre></div>
+<details class="note">
+<summary>List and Inspect Datasets</summary>
+<p>List datasets:</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>bolt<span class="w"> </span>list
+</code></pre></div>
+<p>Inspect the details of a dataset:</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>bolt<span class="w"> </span>list<span class="w"> </span>--name<span class="o">=</span>ecb_exchange_rate
+</code></pre></div>
+</details>
 
 
 
