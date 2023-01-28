@@ -14,13 +14,13 @@ repos:
       - id: mypy
         args: [--no-strict-optional, --ignore-missing-imports]
         files: ^(ts_diffusion/|tests/)
-  # - repo: https://github.com/ambv/black
-  #   rev: 22.6.0
-  #   hooks:
-  #   - id: black
-  #     language: python
-  #     args:
-  #       - "--line-length=88"
+  - repo: https://github.com/ambv/black
+    rev: 22.6.0
+    hooks:
+    - id: black
+      language: python
+      args:
+        - "--line-length=88"
   # - repo: https://github.com/pycqa/isort
   #   rev: 5.10.1
   #   hooks:
