@@ -45,7 +45,9 @@
 
 We can download datasets and load them through `ts-bolt`.
 
-1. All contents in the `datasets` folder is excluded from git.
+!!! warning ""
+
+    All contents in the `datasets` folder is excluded from git.
 
 ### Download datasets
 
