@@ -665,9 +665,9 @@ Any manual changes to this <code>requirements.txt</code> file will be overwritte
 </div>
 <h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">¤</a></h2>
 <p>We can download datasets and load them through <code>ts-bolt</code>.</p>
-<ol>
-<li>All contents in the <code>datasets</code> folder is excluded from git.</li>
-</ol>
+<div class="admonition warning">
+<p>All contents in the <code>datasets</code> folder is excluded from git.</p>
+</div>
 <h3 id="download-datasets">Download datasets<a class="headerlink" href="#download-datasets" title="Permanent link">¤</a></h3>
 <p>This repository ships a datasest downloading tool called "bolt".</p>
 <div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>bolt<span class="w"> </span>download<span class="w"> </span>--name<span class="w"> </span>ecb_exchange_rate<span class="w"> </span>--target<span class="w"> </span>datasets
