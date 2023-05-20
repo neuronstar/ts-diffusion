@@ -18,16 +18,16 @@ class DataFrameDataset(Dataset):
         super().__init__()
         self.dataframe = dataframe
         self.input_length = input_length
-        self.horzion = horizon
+        self.horizon = horizon
         self.dataframe_rows = len(self.dataframe)
-        self.length = self.dataframe_rows - self.input_length - self.horzion + 1
+        self.length = self.dataframe_rows - self.input_length - self.horizon + 1
 
     def moving_slicing(self, idx):
 
         x, y = (
             self.dataframe[idx : self.input_length + idx].values,
             self.dataframe[
-                self.input_length + idx : self.input_length + self.horzion + idx
+                self.input_length + idx : self.input_length + self.horizon + idx
             ].values,
         )
         return x, y
