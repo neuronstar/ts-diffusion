@@ -22,4 +22,6 @@ def test_pandasdataframe_dataloader(dataframe_dataset):
         dataset=dataframe_dataset, batch_size=2, collate_fn=collate_convert_tensor
     )
 
+    next(iter(dl))
+
     assert len(dl) == 3  # len(dataframe_dataset) / 2 = 6 /2 = 3

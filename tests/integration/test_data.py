@@ -17,7 +17,7 @@ def horizon():
 
 def test_dataframe_dataset(ecb_path, input_length, horizon, expected_folder_path):
 
-    is_regenerate_artefact = True
+    is_regenerate_artefact = False
 
     expected_data_path = expected_folder_path / "ecb_dataframe_dataset.pickle"
 
@@ -27,6 +27,7 @@ def test_dataframe_dataset(ecb_path, input_length, horizon, expected_folder_path
     if is_regenerate_artefact:
         with open(expected_data_path, "wb+") as fp:
             pickle.dump(ds, fp)
+        raise Exception(f"regeneration set to True, please set it to False")
 
     with open(expected_data_path, "rb") as fp:
         ds_expected = pickle.load(fp)
